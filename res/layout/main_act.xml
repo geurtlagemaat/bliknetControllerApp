@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"> -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:background="@android:color/background_dark">
+    <LinearLayout
+            android:id="@+id/energyPower"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+                android:id="@+id/txtCurrentPower"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtCurrentPower"
+                android:layout_marginRight="28dip"/>
+
+        <EditText
+                android:id="@+id/edtCurrentPower"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_weight="0.22"
+                android:inputType="text"
+                android:longClickable="false"
+                android:focusable="false"/>
+        <TextView
+                android:id="@+id/txtPowerWatt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="watt"
+                android:layout_marginRight="15dip"/>
+    </LinearLayout>
+    <LinearLayout
+            android:id="@+id/energyPowerGen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp" >
+
+        <TextView
+                android:id="@+id/txtCurrentPowerGen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Huidige opbrengst"
+                android:layout_marginRight="15dip"/>
+
+        <EditText
+                android:id="@+id/edtCurrentPowerGen"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_weight="0.22"
+                android:inputType="text"
+                android:longClickable="false"
+                android:focusable="false"/>
+        <TextView
+                android:id="@+id/txtPowerGenWatt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="watt"
+                android:layout_marginRight="15dip"/>
+    </LinearLayout>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Camera Voor"
+            android:id="@+id/btnViewCameraVoor"
+            android:layout_below="@+id/energyPowerGen"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:onClick="btnViewCameraVoorOnClick"
+    />
+    <Button android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:text="Camera achter"
+            android:id="@+id/buttonViewCameraAchter"
+            android:onClick="btnViewCameraAchterOnClick"
+            android:layout_below="@+id/btnViewCameraVoor" android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Test Icon buttons"
+            android:id="@+id/textView" android:layout_below="@+id/buttonViewCameraAchter"
+            android:layout_alignParentStart="true" android:layout_alignParentEnd="true" android:textStyle="bold"
+            android:textAlignment="center"/>
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton" android:layout_below="@+id/textView" android:layout_alignParentStart="true"
+            android:src="@android:drawable/ic_popup_reminder" android:onClick="btnSetAlerts" android:clickable="true"/>
+    <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton2" android:layout_alignBottom="@+id/imageButton"
+            android:layout_toEndOf="@+id/imageButton" android:src="@android:drawable/ic_menu_preferences"
+            android:onClick="btnSetPrefences"/>
+    <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="bliknetController Service"
+            android:id="@+id/swService"
+            android:layout_below="@+id/imageButton"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+    />
+
+
+    <!-- <LinearLayout
+            android:id="@+id/energyPowerGen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+                android:id="@+id/txtCurrentPowerGen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/txtCurrentPower"
+                android:layout_marginRight="15dip"/>
+
+        <EditText
+                android:id="@+id/edtCurrentPowerGen"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:layout_weight="0.22"
+                android:inputType="text"
+                android:longClickable="false"
+                android:focusable="false"/>
+        <TextView
+                android:id="@+id/txtPowerGenWatt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="watt"
+                android:layout_marginRight="15dip"/>
+    </LinearLayout>  -->
+
+
+    <!-- <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtText" android:layout_gravity="center_horizontal"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/btnText" android:layout_gravity="center_horizontal"
+            android:onClick="btnTextOnClick"/>
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Nothing Here"
+            android:id="@+id/txtTest" android:layout_gravity="center_horizontal"/> -->
+
+    </RelativeLayout>
+<!-- </LinearLayout> -->
